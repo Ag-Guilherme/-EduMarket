@@ -153,7 +153,7 @@
         .price-old { font-size: 0.8rem; color: var(--text-light); text-decoration: line-through; }
         .price-current { font-size: 1.3rem; font-weight: 800; color: var(--primary); }
         .price-installment { font-size: 0.75rem; color: var(--text-light); }
-        .product-shipping { margin-top: 8px; font-size: 0.75rem; color: var(--success); display: flex; align-items: center; gap: 4px; font-weight: 600; }
+        .product-instant { margin-top: 8px; font-size: 0.75rem; color: var(--success); display: flex; align-items: center; gap: 4px; font-weight: 600; }
         .product-add-cart { width: 100%; padding: 10px; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 12px; font-family: inherit; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
         .product-add-cart:hover { background: var(--primary-dark); }
         
@@ -610,7 +610,7 @@
                 <div class="stats-grid">
                     <div class="stat-card"><div class="stat-card-header"><span>Vendas Hoje</span><i class="ri-money-dollar-circle-line" style="color:var(--success)"></i></div><div class="value">R$ 2.458</div><div class="change up">↑ 12%</div></div>
                     <div class="stat-card"><div class="stat-card-header"><span>Pedidos</span><i class="ri-shopping-bag-line" style="color:var(--info)"></i></div><div class="value">47</div><div class="change up">↑ 8%</div></div>
-                    <div class="stat-card"><div class="stat-card-header"><span>Produtos</span><i class="ri-book-3-line" style="color:var(--accent)"></i></div><div class="value" id="totalProductsStat">12</div></div>
+                    <div class="stat-card"><div class="stat-card-header"><span>Conteúdos</span><i class="ri-book-3-line" style="color:var(--accent)"></i></div><div class="value" id="totalProductsStat">12</div></div>
                     <div class="stat-card"><div class="stat-card-header"><span>Emails</span><i class="ri-mail-line" style="color:var(--primary)"></i></div><div class="value" id="emailCountStat">0</div></div>
                 </div>
                 <div style="display:grid;grid-template-columns:2fr 1fr;gap:24px;">
@@ -619,7 +619,6 @@
                 </div>
             </div>
 
-            <!-- CONTEÚDO DO SITE - NOVA SEÇÃO -->
             <div class="admin-section" id="section-content">
                 <div class="admin-card">
                     <div class="admin-card-header"><h3><i class="ri-text"></i> Editar Conteúdo do Site</h3></div>
@@ -633,7 +632,6 @@
                             <button class="tab-btn" onclick="showContentTab('tab-sections', this)">Títulos</button>
                         </div>
                         
-                        <!-- TOP BAR -->
                         <div class="tab-content active" id="tab-topbar">
                             <div class="content-editor">
                                 <h4>Barra Superior</h4>
@@ -644,16 +642,15 @@
                             </div>
                         </div>
                         
-                        <!-- FEATURES -->
                         <div class="tab-content" id="tab-features">
                             <div class="content-editor">
                                 <h4>Cards de Features</h4>
                                 <div class="feature-edit-grid">
                                     <div class="feature-edit-card">
                                         <h5>Card 1</h5>
-                                        <div class="form-group"><label>Ícone</label><input type="text" id="feat1Icon" value="ri-truck-line"></div>
-                                        <div class="form-group"><label>Título</label><input type="text" id="feat1Title" value="Frete Grátis"></div>
-                                        <div class="form-group"><label>Subtítulo</label><input type="text" id="feat1Subtitle" value="Acima de R$ 99"></div>
+                                        <div class="form-group"><label>Ícone</label><input type="text" id="feat1Icon" value="ri-download-cloud-line"></div>
+                                        <div class="form-group"><label>Título</label><input type="text" id="feat1Title" value="Acesso Imediato"></div>
+                                        <div class="form-group"><label>Subtítulo</label><input type="text" id="feat1Subtitle" value="Receba na hora"></div>
                                     </div>
                                     <div class="feature-edit-card">
                                         <h5>Card 2</h5>
@@ -664,8 +661,8 @@
                                     <div class="feature-edit-card">
                                         <h5>Card 3</h5>
                                         <div class="form-group"><label>Ícone</label><input type="text" id="feat3Icon" value="ri-refresh-line"></div>
-                                        <div class="form-group"><label>Título</label><input type="text" id="feat3Title" value="Troca Fácil"></div>
-                                        <div class="form-group"><label>Subtítulo</label><input type="text" id="feat3Subtitle" value="Até 30 dias"></div>
+                                        <div class="form-group"><label>Título</label><input type="text" id="feat3Title" value="Garantia de 7 dias"></div>
+                                        <div class="form-group"><label>Subtítulo</label><input type="text" id="feat3Subtitle" value="Satisfação garantida"></div>
                                     </div>
                                     <div class="feature-edit-card">
                                         <h5>Card 4</h5>
@@ -678,7 +675,6 @@
                             </div>
                         </div>
                         
-                        <!-- NEWSLETTER -->
                         <div class="tab-content" id="tab-newsletter">
                             <div class="content-editor">
                                 <h4>Newsletter</h4>
@@ -690,36 +686,30 @@
                             </div>
                         </div>
                         
-                        <!-- FOOTER -->
                         <div class="tab-content" id="tab-footer">
                             <div class="content-editor">
                                 <h4>Rodapé</h4>
                                 <div class="form-group"><label>Descrição da Loja</label><textarea id="footerDesc">O Cantinho da Profª Ana Carolina M. nasceu com o objetivo de democratizar o acesso a materiais educacionais de qualidade no Brasil.</textarea></div>
                                 <div class="form-group"><label>Copyright</label><input type="text" id="footerCopyright" value="© 2025 Cantinho da Profª Ana Carolina M. Todos os direitos reservados."></div>
-                                
                                 <h4 style="margin-top:20px;">Coluna Institucional</h4>
                                 <div class="form-group"><label>Título Coluna</label><input type="text" id="footerCol1Title" value="Institucional"></div>
                                 <div class="form-group"><label>Link 1</label><input type="text" id="footerCol1Link1" value="Sobre Nós"></div>
                                 <div class="form-group"><label>Link 2</label><input type="text" id="footerCol1Link2" value="Como Funciona"></div>
                                 <div class="form-group"><label>Link 3</label><input type="text" id="footerCol1Link3" value="Blog"></div>
-                                
                                 <h4 style="margin-top:20px;">Coluna Ajuda</h4>
                                 <div class="form-group"><label>Título Coluna</label><input type="text" id="footerCol2Title" value="Ajuda"></div>
                                 <div class="form-group"><label>Link 1</label><input type="text" id="footerCol2Link1" value="Central de Ajuda"></div>
                                 <div class="form-group"><label>Link 2</label><input type="text" id="footerCol2Link2" value="Como Comprar"></div>
                                 <div class="form-group"><label>Link 3</label><input type="text" id="footerCol2Link3" value="Trocas"></div>
-                                
                                 <h4 style="margin-top:20px;">Coluna Políticas</h4>
                                 <div class="form-group"><label>Título Coluna</label><input type="text" id="footerCol3Title" value="Políticas"></div>
                                 <div class="form-group"><label>Link 1</label><input type="text" id="footerCol3Link1" value="Termos"></div>
                                 <div class="form-group"><label>Link 2</label><input type="text" id="footerCol3Link2" value="Privacidade"></div>
                                 <div class="form-group"><label>Link 3</label><input type="text" id="footerCol3Link3" value="LGPD"></div>
-                                
                                 <div class="form-actions"><button class="btn btn-primary" onclick="saveSiteContent()"><i class="ri-save-line"></i> Salvar</button></div>
                             </div>
                         </div>
                         
-                        <!-- PÁGINAS INFO -->
                         <div class="tab-content" id="tab-info">
                             <div class="content-editor">
                                 <h4>Página: Sobre Nós</h4>
@@ -729,34 +719,29 @@
                                 <div class="form-group"><label>Card 1 Conteúdo</label><textarea id="infoAboutCard1Content">O Cantinho da Profª Ana Carolina M. nasceu com o objetivo de democratizar o acesso a materiais educacionais de qualidade no Brasil.</textarea></div>
                                 <div class="form-group"><label>Card 2 Título</label><input type="text" id="infoAboutCard2Title" value="Missão"></div>
                                 <div class="form-group"><label>Card 2 Conteúdo</label><textarea id="infoAboutCard2Content">Conectar educadores e alunos a materiais pedagógicos de alta qualidade com preços acessíveis.</textarea></div>
-                                
                                 <h4 style="margin-top:20px;">Página: Como Funciona</h4>
                                 <div class="form-group"><label>Título</label><input type="text" id="infoHowTitle" value="Como Funciona"></div>
                                 <div class="form-group"><label>Card Título</label><input type="text" id="infoHowCardTitle" value="Como Comprar"></div>
-                                <div class="form-group"><label>Passo 1</label><input type="text" id="infoHowStep1" value="1. Navegue pelos produtos"></div>
+                                <div class="form-group"><label>Passo 1</label><input type="text" id="infoHowStep1" value="1. Escolha o conteúdo desejado"></div>
                                 <div class="form-group"><label>Passo 2</label><input type="text" id="infoHowStep2" value="2. Adicione ao carrinho"></div>
                                 <div class="form-group"><label>Passo 3</label><input type="text" id="infoHowStep3" value="3. Finalize o pagamento"></div>
-                                <div class="form-group"><label>Passo 4</label><input type="text" id="infoHowStep4" value="4. Receba em casa"></div>
-                                
+                                <div class="form-group"><label>Passo 4</label><input type="text" id="infoHowStep4" value="4. Acesse imediatamente"></div>
                                 <h4 style="margin-top:20px;">Página: Blog</h4>
                                 <div class="form-group"><label>Título</label><input type="text" id="infoBlogTitle" value="Blog"></div>
                                 <div class="form-group"><label>Subtítulo</label><input type="text" id="infoBlogSubtitle" value="Novidades e conteúdos"></div>
                                 <div class="form-group"><label>Card Título</label><input type="text" id="infoBlogCardTitle" value="Últimas Publicações"></div>
                                 <div class="form-group"><label>Conteúdo</label><textarea id="infoBlogContent">Em breve conteúdo exclusivo!</textarea></div>
-                                
                                 <h4 style="margin-top:20px;">Página: Políticas</h4>
                                 <div class="form-group"><label>Título</label><input type="text" id="infoPolicyTitle" value="Políticas"></div>
                                 <div class="form-group"><label>Card 1 Título</label><input type="text" id="infoPolicyCard1Title" value="Termos"></div>
-                                <div class="form-group"><label>Card 1 Item 1</label><input type="text" id="infoPolicyItem1" value="Materiais para uso pessoal e educacional"></div>
+                                <div class="form-group"><label>Card 1 Item 1</label><input type="text" id="infoPolicyItem1" value="Conteúdos para uso pessoal e educacional"></div>
                                 <div class="form-group"><label>Card 1 Item 2</label><input type="text" id="infoPolicyItem2" value="Proibida reprodução sem autorização"></div>
                                 <div class="form-group"><label>Card 2 Título</label><input type="text" id="infoPolicyCard2Title" value="Privacidade"></div>
                                 <div class="form-group"><label>Card 2 Conteúdo</label><textarea id="infoPolicyCard2Content">Dados protegidos conforme a LGPD.</textarea></div>
-                                
                                 <div class="form-actions"><button class="btn btn-primary" onclick="saveSiteContent()"><i class="ri-save-line"></i> Salvar</button></div>
                             </div>
                         </div>
                         
-                        <!-- TÍTULOS DAS SEÇÕES -->
                         <div class="tab-content" id="tab-sections">
                             <div class="content-editor">
                                 <h4>Títulos das Seções</h4>
@@ -796,7 +781,6 @@
                                 <div class="form-group"><label>Badge</label><select id="productBadge"><option value="">Nenhum</option><option value="sale">🏷️ Oferta</option><option value="new">✨ Novo</option><option value="hot">🔥 Popular</option></select></div>
                             </div>
                             <div class="form-group"><label>Descrição</label><textarea id="productDesc"></textarea></div>
-                            <div class="form-group"><label>Frete</label><select id="productShipping"><option value="Frete Grátis">Frete Grátis</option><option value="">Frete Padrão</option></select></div>
                             <div class="form-actions"><button type="button" class="btn btn-outline" onclick="closeProductModal()">Cancelar</button><button type="submit" class="btn btn-primary"><i class="ri-save-line"></i> Salvar</button></div>
                         </form>
                     </div>
@@ -1319,7 +1303,7 @@ const DEFAULT_DATA = {
     banners: [
         { badge: '🔥 OFERTAS', title: 'Materiais Pedagógicos com até 40% OFF', desc: 'Apostilas, livros e materiais didáticos.', bg: 'linear-gradient(135deg, #E91E63 0%, #F06292 50%, #FCE4EC 100%)', emoji: '📚' },
         { badge: '✨ NOVIDADES', title: 'Nova Coleção 2025 — BNCC', desc: 'Materiais atualizados conforme a BNCC.', bg: 'linear-gradient(135deg, #FF6F00 0%, #F5E6CA 50%, #FFF5F8 100%)', emoji: '🎓' },
-        { badge: '🚚 FRETE GRÁTIS', title: 'Frete Grátis para todo o Brasil', desc: 'Em compras acima de R$ 99,00.', bg: 'linear-gradient(135deg, #AD1457 0%, #E91E63 50%, #F06292 100%)', emoji: '📦' }
+        { badge: '⚡ ACESSO IMEDIATO', title: 'Receba seu conteúdo na hora!', desc: 'Após o pagamento, acesso instantâneo ao material.', bg: 'linear-gradient(135deg, #AD1457 0%, #E91E63 50%, #F06292 100%)', emoji: '💻' }
     ],
     categories: [
         { id: 'matematica', name: 'Matemática', emoji: '📐', color: '#DBEAFE', gradient: 'linear-gradient(135deg,#DBEAFE,#93C5FD)' },
@@ -1327,28 +1311,28 @@ const DEFAULT_DATA = {
         { id: 'ciencias', name: 'Ciências', emoji: '🔬', color: '#EDE9FE', gradient: 'linear-gradient(135deg,#EDE9FE,#A78BFA)' },
         { id: 'historia', name: 'História', emoji: '📜', color: '#FEF3C7', gradient: 'linear-gradient(135deg,#FEF3C7,#F59E0B)' },
         { id: 'geografia', name: 'Geografia', emoji: '🌍', color: '#CCFBF1', gradient: 'linear-gradient(135deg,#CCFBF1,#2DD4BF)' },
-        { id: 'ingles', name: 'Inglês', emoji: '🇬🇧', color: '#FEE2E2', gradient: 'linear-gradient(135deg,#FEE2E2,#F87171)' },
+        { id: 'ingles', name: 'Inglês', emoji: '🇬', color: '#FEE2E2', gradient: 'linear-gradient(135deg,#FEE2E2,#F87171)' },
         { id: 'artes', name: 'Artes', emoji: '🎨', color: '#FCE7F3', gradient: 'linear-gradient(135deg,#FCE7F3,#F472B6)' },
         { id: 'pedagogia', name: 'Pedagogia', emoji: '🧠', color: '#E0E7FF', gradient: 'linear-gradient(135deg,#E0E7FF,#818CF8)' }
     ],
     products: [
-        { id: 1, name: 'Apostila Matemática — 1º ao 5º Ano', category: 'matematica', categoryLabel: 'Matemática', price: 49.90, oldPrice: 79.90, rating: 4.8, reviews: 234, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/12c0c35d2-7c2f-4f59-b505-05c33025d244.png', shipping: 'Frete Grátis', desc: 'Apostila completa para o Ensino Fundamental I.' },
-        { id: 2, name: 'Apostila Português — Gramática', category: 'portugues', categoryLabel: 'Português', price: 39.90, oldPrice: 59.90, rating: 4.7, reviews: 189, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1cdebafff-2a2d-45fd-bff6-7f5b16e443cf.png', shipping: 'Frete Grátis', desc: 'Material didático de Português.' },
-        { id: 3, name: 'Ciências Naturais — Kit Completo', category: 'ciencias', categoryLabel: 'Ciências', price: 54.90, oldPrice: null, rating: 4.9, reviews: 312, badge: 'hot', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1495d1962-4496-4deb-aa9f-eb354f0163f1.png', shipping: 'Frete Grátis', desc: 'Kit com experimentos práticos.' },
-        { id: 4, name: 'História do Brasil — Ilustrada', category: 'historia', categoryLabel: 'História', price: 44.90, oldPrice: 64.90, rating: 4.6, reviews: 156, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/132146e6f-5ac4-4450-886d-ed72f06ce9c4.png', shipping: 'Frete Grátis', desc: 'Apostila ilustrada de História.' },
-        { id: 5, name: 'Geografia — Atlas Interativo', category: 'geografia', categoryLabel: 'Geografia', price: 59.90, oldPrice: null, rating: 4.8, reviews: 201, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1cb8690c4-f33e-4179-9966-3c9c2cf21fc2.png', shipping: 'Frete Grátis', desc: 'Atlas interativo.' },
-        { id: 6, name: 'Inglês para Crianças', category: 'ingles', categoryLabel: 'Inglês', price: 34.90, oldPrice: 49.90, rating: 4.5, reviews: 178, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/16f2811fe-7a32-4184-9bcf-314272bd0e08.png', shipping: 'Frete Grátis', desc: 'Inglês para crianças.' },
-        { id: 7, name: 'Artes e Música — Criativo', category: 'artes', categoryLabel: 'Artes', price: 29.90, oldPrice: null, rating: 4.7, reviews: 143, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1858df6bb-ff05-4f83-812d-31dc28686b0f.png', shipping: 'Frete Grátis', desc: 'Material criativo.' },
-        { id: 8, name: 'Kit Alfabetização', category: 'pedagogia', categoryLabel: 'Pedagogia', price: 89.90, oldPrice: 129.90, rating: 4.9, reviews: 456, badge: 'hot', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/12c0c35d2-7c2f-4f59-b505-05c33025d244.png', shipping: 'Frete Grátis', desc: 'Kit completo.' },
-        { id: 9, name: 'Matemática Divertida', category: 'matematica', categoryLabel: 'Matemática', price: 42.90, oldPrice: null, rating: 4.6, reviews: 98, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1cdebafff-2a2d-45fd-bff6-7f5b16e443cf.png', shipping: 'Frete Grátis', desc: 'Jogos educativos.' },
-        { id: 10, name: 'Redação — Guia', category: 'portugues', categoryLabel: 'Português', price: 52.90, oldPrice: 74.90, rating: 4.8, reviews: 267, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/132146e6f-5ac4-4450-886d-ed72f06ce9c4.png', shipping: 'Frete Grátis', desc: 'Guia de redação.' },
-        { id: 11, name: 'Projeto Meio Ambiente', category: 'ciencias', categoryLabel: 'Ciências', price: 37.90, oldPrice: null, rating: 4.7, reviews: 134, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1495d1962-4496-4deb-aa9f-eb354f0163f1.png', shipping: 'Frete Grátis', desc: 'Projeto Meio Ambiente.' },
-        { id: 12, name: 'Caderno Multidisciplinar', category: 'pedagogia', categoryLabel: 'Pedagogia', price: 24.90, oldPrice: 34.90, rating: 4.5, reviews: 89, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1858df6bb-ff05-4f83-812d-31dc28686b0f.png', shipping: 'Frete Grátis', desc: 'Caderno multidisciplinar.' }
+        { id: 1, name: 'Apostila Matemática — 1º ao 5º Ano', category: 'matematica', categoryLabel: 'Matemática', price: 49.90, oldPrice: 79.90, rating: 4.8, reviews: 234, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/12c0c35d2-7c2f-4f59-b505-05c33025d244.png', shipping: 'Acesso Imediato', desc: 'Apostila completa para o Ensino Fundamental I.' },
+        { id: 2, name: 'Apostila Português — Gramática', category: 'portugues', categoryLabel: 'Português', price: 39.90, oldPrice: 59.90, rating: 4.7, reviews: 189, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1cdebafff-2a2d-45fd-bff6-7f5b16e443cf.png', shipping: 'Acesso Imediato', desc: 'Material didático de Português.' },
+        { id: 3, name: 'Ciências Naturais — Kit Completo', category: 'ciencias', categoryLabel: 'Ciências', price: 54.90, oldPrice: null, rating: 4.9, reviews: 312, badge: 'hot', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1495d1962-4496-4deb-aa9f-eb354f0163f1.png', shipping: 'Acesso Imediato', desc: 'Kit com experimentos práticos.' },
+        { id: 4, name: 'História do Brasil — Ilustrada', category: 'historia', categoryLabel: 'História', price: 44.90, oldPrice: 64.90, rating: 4.6, reviews: 156, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/132146e6f-5ac4-4450-886d-ed72f06ce9c4.png', shipping: 'Acesso Imediato', desc: 'Apostila ilustrada de História.' },
+        { id: 5, name: 'Geografia — Atlas Interativo', category: 'geografia', categoryLabel: 'Geografia', price: 59.90, oldPrice: null, rating: 4.8, reviews: 201, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1cb8690c4-f33e-4179-9966-3c9c2cf21fc2.png', shipping: 'Acesso Imediato', desc: 'Atlas interativo.' },
+        { id: 6, name: 'Inglês para Crianças', category: 'ingles', categoryLabel: 'Inglês', price: 34.90, oldPrice: 49.90, rating: 4.5, reviews: 178, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/16f2811fe-7a32-4184-9bcf-314272bd0e08.png', shipping: 'Acesso Imediato', desc: 'Inglês para crianças.' },
+        { id: 7, name: 'Artes e Música — Criativo', category: 'artes', categoryLabel: 'Artes', price: 29.90, oldPrice: null, rating: 4.7, reviews: 143, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1858df6bb-ff05-4f83-812d-31dc28686b0f.png', shipping: 'Acesso Imediato', desc: 'Material criativo.' },
+        { id: 8, name: 'Kit Alfabetização', category: 'pedagogia', categoryLabel: 'Pedagogia', price: 89.90, oldPrice: 129.90, rating: 4.9, reviews: 456, badge: 'hot', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/12c0c35d2-7c2f-4f59-b505-05c33025d244.png', shipping: 'Acesso Imediato', desc: 'Kit completo.' },
+        { id: 9, name: 'Matemática Divertida', category: 'matematica', categoryLabel: 'Matemática', price: 42.90, oldPrice: null, rating: 4.6, reviews: 98, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1cdebafff-2a2d-45fd-bff6-7f5b16e443cf.png', shipping: 'Acesso Imediato', desc: 'Jogos educativos.' },
+        { id: 10, name: 'Redação — Guia', category: 'portugues', categoryLabel: 'Português', price: 52.90, oldPrice: 74.90, rating: 4.8, reviews: 267, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/132146e6f-5ac4-4450-886d-ed72f06ce9c4.png', shipping: 'Acesso Imediato', desc: 'Guia de redação.' },
+        { id: 11, name: 'Projeto Meio Ambiente', category: 'ciencias', categoryLabel: 'Ciências', price: 37.90, oldPrice: null, rating: 4.7, reviews: 134, badge: 'new', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1495d1962-4496-4deb-aa9f-eb354f0163f1.png', shipping: 'Acesso Imediato', desc: 'Projeto Meio Ambiente.' },
+        { id: 12, name: 'Caderno Multidisciplinar', category: 'pedagogia', categoryLabel: 'Pedagogia', price: 24.90, oldPrice: 34.90, rating: 4.5, reviews: 89, badge: 'sale', image: 'https://image.qwenlm.ai/public_source/8c5b0df1-e376-48a9-a7c1-6372352ac84a/1858df6bb-ff05-4f83-812d-31dc28686b0f.png', shipping: 'Acesso Imediato', desc: 'Caderno multidisciplinar.' }
     ],
     qa: [
-        { id: 1, question: 'Qual o prazo de entrega?', keywords: 'entrega, prazo, frete, envio', answer: 'O prazo varia de 3 a 10 dias úteis. Frete grátis acima de R$ 99!', category: 'envio' },
-        { id: 2, question: 'Quais formas de pagamento?', keywords: 'pagamento, pagar, cartão, pix, boleto', answer: 'Aceitamos PIX, Cartão de Crédito (3x sem juros) e Boleto.', category: 'pagamento' },
-        { id: 3, question: 'Posso trocar um produto?', keywords: 'troca, devolver, trocar', answer: 'Sim! Até 30 dias após o recebimento.', category: 'produtos' },
+        { id: 1, question: 'Como recebo o conteúdo?', keywords: 'receber, acesso, download, entrega, prazo', answer: 'Após a confirmação do pagamento, você recebe o acesso imediatamente! O conteúdo digital é disponibilizado na sua conta.', category: 'envio' },
+        { id: 2, question: 'Quais formas de pagamento?', keywords: 'pagamento, pagar, cartão, pix, boleto', answer: 'Aceitamos PIX, Cartão de Crédito (em até 3x sem juros) e Boleto.', category: 'pagamento' },
+        { id: 3, question: 'Posso pedir reembolso?', keywords: 'reembolso, devolver, troca, garantia', answer: 'Sim! Você tem garantia de 7 dias. Se não ficar satisfeito, devolvemos seu dinheiro.', category: 'produtos' },
         { id: 4, question: 'Desconto para professores?', keywords: 'desconto, professor, educador', answer: 'Sim! Use o cupom PROF15 para 15% OFF.', category: 'pagamento' },
         { id: 5, question: 'É seguro comprar?', keywords: 'seguro, segurança, confiável', answer: 'Totalmente seguro! Usamos criptografia SSL.', category: 'geral' },
         { id: 6, question: 'Horário de atendimento?', keywords: 'horário, atendimento, funciona', answer: 'Seg a Sex: 8h às 18h, Sáb: 8h às 12h.', category: 'geral' }
@@ -1370,9 +1354,9 @@ const DEFAULT_DATA = {
         topBarLink1: 'Central de Ajuda',
         topBarLink2: 'Fale Conosco',
         features: [
-            { icon: 'ri-truck-line', title: 'Frete Grátis', subtitle: 'Acima de R$ 99' },
+            { icon: 'ri-download-cloud-line', title: 'Acesso Imediato', subtitle: 'Receba na hora' },
             { icon: 'ri-shield-check-line', title: 'Compra Segura', subtitle: 'Proteção total' },
-            { icon: 'ri-refresh-line', title: 'Troca Fácil', subtitle: 'Até 30 dias' },
+            { icon: 'ri-refresh-line', title: 'Garantia de 7 dias', subtitle: 'Satisfação garantida' },
             { icon: 'ri-customer-service-2-line', title: 'Suporte 24h', subtitle: 'Estamos aqui' }
         ],
         newsletter: { title: '📬 Receba Novidades', desc: 'Ganhe 10% OFF na primeira compra!', placeholder: 'Seu e-mail', btnText: 'Cadastrar' },
@@ -1385,9 +1369,9 @@ const DEFAULT_DATA = {
         },
         infoPages: {
             about: { title: 'Sobre Nós', subtitle: 'Conheça nossa história', card1: { title: 'Nossa História', content: 'O Cantinho da Profª Ana Carolina M. nasceu com o objetivo de democratizar o acesso a materiais educacionais de qualidade no Brasil.' }, card2: { title: 'Missão', content: 'Conectar educadores e alunos a materiais pedagógicos de alta qualidade com preços acessíveis.' } },
-            how: { title: 'Como Funciona', cardTitle: 'Como Comprar', steps: ['1. Navegue pelos produtos', '2. Adicione ao carrinho', '3. Finalize o pagamento', '4. Receba em casa'] },
+            how: { title: 'Como Funciona', cardTitle: 'Como Comprar', steps: ['1. Escolha o conteúdo desejado', '2. Adicione ao carrinho', '3. Finalize o pagamento', '4. Acesse imediatamente'] },
             blog: { title: 'Blog', subtitle: 'Novidades e conteúdos', cardTitle: 'Últimas Publicações', content: 'Em breve conteúdo exclusivo!' },
-            policy: { title: 'Políticas', card1: { title: 'Termos', items: ['Materiais para uso pessoal e educacional', 'Proibida reprodução sem autorização'] }, card2: { title: 'Privacidade', content: 'Dados protegidos conforme a LGPD.' } }
+            policy: { title: 'Políticas', card1: { title: 'Termos', items: ['Conteúdos para uso pessoal e educacional', 'Proibida reprodução sem autorização'] }, card2: { title: 'Privacidade', content: 'Dados protegidos conforme a LGPD.' } }
         },
         sectionTitles: { categories: 'Categorias Populares', dealsTitle: 'Ofertas Relâmpago', dealsSubtitle: 'Descontos exclusivos!', ctaText: 'Ver Ofertas' }
     }
@@ -1432,7 +1416,6 @@ let registeredEmails = appData.registeredEmails || [];
 let sentCoupons = appData.sentCoupons || [];
 let selectedEmails = new Set();
 
-// ===== BOT NAME =====
 function saveBotName() {
     appData.chatbot.name = document.getElementById('chatbotName').value || 'Edu';
     appData.chatbot.subtitle = document.getElementById('chatbotSubtitle').value || 'Assistente';
@@ -1456,7 +1439,6 @@ function updateBotNameEverywhere() {
     if (chatOpen) initChat();
 }
 
-// ===== CONTENT TABS =====
 function showContentTab(tabId, btn) {
     document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1464,7 +1446,6 @@ function showContentTab(tabId, btn) {
     btn.classList.add('active');
 }
 
-// ===== SAVE SITE CONTENT =====
 function saveSiteContent() {
     const sc = appData.siteContent;
     sc.topBarText = document.getElementById('topBarText').value;
@@ -1569,7 +1550,6 @@ function loadContentFields() {
     }
 }
 
-// ===== APPLY THEME =====
 function applyTheme() {
     const t = appData.theme;
     const r = document.documentElement.style;
@@ -1634,25 +1614,19 @@ function renderFeatures() {
     const grid = document.getElementById('featuresGrid');
     if (!grid) return;
     const features = appData.siteContent?.features || DEFAULT_DATA.siteContent.features;
-    const iconClasses = { green: 'green', orange: 'orange', blue: 'blue', purple: 'purple' };
     const iconColorClasses = ['green', 'orange', 'blue', 'purple'];
     grid.innerHTML = features.map((f, i) => `<div class="feature-card"><div class="feature-icon ${iconColorClasses[i]}"><i class="${f.icon}"></i></div><div class="feature-text"><h4>${f.title}</h4><p>${f.subtitle}</p></div></div>`).join('');
 }
 
 function renderSiteContent() {
     const sc = appData.siteContent;
-    // Newsletter
     document.getElementById('newsletterTitleDisplay').textContent = sc.newsletter?.title || '';
     document.getElementById('newsletterDescDisplay').textContent = sc.newsletter?.desc || '';
     document.getElementById('newsletterInput').placeholder = sc.newsletter?.placeholder || '';
     document.getElementById('newsletterBtnDisplay').textContent = sc.newsletter?.btnText || '';
-    
-    // Section titles
     document.getElementById('sectionCategoriesTitleDisplay').textContent = sc.sectionTitles?.categories || '';
     document.getElementById('sectionDealsTitleDisplay').textContent = sc.sectionTitles?.dealsTitle || '';
     document.getElementById('sectionDealsSubtitleDisplay').textContent = sc.sectionTitles?.dealsSubtitle || '';
-    
-    // Footer
     document.getElementById('footerDescDisplay').textContent = sc.footer?.desc || '';
     document.getElementById('footerCopyrightDisplay').textContent = sc.footer?.copyright || '';
     document.getElementById('footerCol1TitleDisplay').textContent = sc.footer?.col1?.title || '';
@@ -1667,12 +1641,8 @@ function renderSiteContent() {
     document.getElementById('footerCol3Link1Display').textContent = sc.footer?.col3?.links?.[0] || '';
     document.getElementById('footerCol3Link2Display').textContent = sc.footer?.col3?.links?.[1] || '';
     document.getElementById('footerCol3Link3Display').textContent = sc.footer?.col3?.links?.[2] || '';
-    
-    // Top bar links
     document.getElementById('topBarLink1Text').textContent = sc.topBarLink1 || '';
     document.getElementById('topBarLink2Text').textContent = sc.topBarLink2 || '';
-    
-    // Info pages
     const ip = sc.infoPages || {};
     document.getElementById('infoAboutTitleDisplay').textContent = ip.about?.title || '';
     document.getElementById('infoAboutSubtitleDisplay').textContent = ip.about?.subtitle || '';
@@ -1703,7 +1673,7 @@ function renderProducts(list) {
     const countEl = document.getElementById('productCount');
     if (!grid) return;
     if (countEl) countEl.textContent = list.length;
-    grid.innerHTML = list.map((p, i) => `<div class="product-card" style="animation-delay:${i * 0.05}s">${p.badge ? `<span class="product-badge badge-${p.badge}">${p.badge === 'sale' ? '🏷️ Oferta' : p.badge === 'new' ? '✨ Novo' : '🔥 Popular'}</span>` : ''}<button class="product-wishlist" onclick="event.stopPropagation(); toggleWishlist(this)"><i class="ri-heart-line"></i></button><div class="product-image" onclick="openModal(${p.id})"><img src="${p.image}" alt="${p.name}"><div class="product-quick-actions"><button class="quick-btn" onclick="event.stopPropagation(); openModal(${p.id})"><i class="ri-eye-line"></i></button><button class="quick-btn" onclick="event.stopPropagation(); addToCart(${p.id})"><i class="ri-shopping-cart-2-line"></i></button></div></div><div class="product-info"><div class="product-category">${p.categoryLabel}</div><div class="product-name" onclick="openModal(${p.id})">${p.name}</div><div class="product-rating"><div class="stars">${genStars(p.rating)}</div><span class="rating-count">(${p.reviews})</span></div><div class="product-price">${p.oldPrice ? `<span class="price-old">R$ ${p.oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}<span class="price-current">R$ ${p.price.toFixed(2).replace('.', ',')}</span><span class="price-installment">em até 3x de R$ ${(p.price / 3).toFixed(2).replace('.', ',')} sem juros</span></div>${p.shipping ? `<div class="product-shipping"><i class="ri-truck-line"></i> ${p.shipping}</div>` : ''}<button class="product-add-cart" onclick="addToCart(${p.id})"><i class="ri-shopping-cart-2-line"></i> Adicionar</button></div></div>`).join('');
+    grid.innerHTML = list.map((p, i) => `<div class="product-card" style="animation-delay:${i * 0.05}s">${p.badge ? `<span class="product-badge badge-${p.badge}">${p.badge === 'sale' ? '🏷️ Oferta' : p.badge === 'new' ? '✨ Novo' : '🔥 Popular'}</span>` : ''}<button class="product-wishlist" onclick="event.stopPropagation(); toggleWishlist(this)"><i class="ri-heart-line"></i></button><div class="product-image" onclick="openModal(${p.id})"><img src="${p.image}" alt="${p.name}"><div class="product-quick-actions"><button class="quick-btn" onclick="event.stopPropagation(); openModal(${p.id})"><i class="ri-eye-line"></i></button><button class="quick-btn" onclick="event.stopPropagation(); addToCart(${p.id})"><i class="ri-shopping-cart-2-line"></i></button></div></div><div class="product-info"><div class="product-category">${p.categoryLabel}</div><div class="product-name" onclick="openModal(${p.id})">${p.name}</div><div class="product-rating"><div class="stars">${genStars(p.rating)}</div><span class="rating-count">(${p.reviews})</span></div><div class="product-price">${p.oldPrice ? `<span class="price-old">R$ ${p.oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}<span class="price-current">R$ ${p.price.toFixed(2).replace('.', ',')}</span><span class="price-installment">em até 3x de R$ ${(p.price / 3).toFixed(2).replace('.', ',')} sem juros</span></div><div class="product-instant"><i class="ri-download-cloud-line"></i> ${p.shipping || 'Acesso Imediato'}</div><button class="product-add-cart" onclick="addToCart(${p.id})"><i class="ri-shopping-cart-2-line"></i> Adicionar</button></div></div>`).join('');
 }
 
 function genStars(r) { let h = ''; for (let i = 1; i <= 5; i++) h += i <= Math.floor(r) ? '<i class="ri-star-fill"></i>' : (i - 0.5 <= r ? '<i class="ri-star-half-fill"></i>' : '<i class="ri-star-line"></i>'); return h; }
@@ -1801,7 +1771,7 @@ function closeModal() { document.getElementById('productModal').classList.remove
 function openCheckout() {
     toggleCart();
     const price = cart.reduce((s, i) => s + (i.price * i.qty), 0);
-    document.getElementById('orderSummary').innerHTML = `<h4>Resumo</h4>${cart.map(i => `<div class="order-line"><span>${i.name} x${i.qty}</span><span>R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}</span></div>`).join('')}<div class="order-line"><span>Frete</span><span style="color:var(--success)">Grátis</span></div><div class="order-line total"><span>Total</span><span>R$ ${price.toFixed(2).replace('.', ',')}</span></div>`;
+    document.getElementById('orderSummary').innerHTML = `<h4>Resumo</h4>${cart.map(i => `<div class="order-line"><span>${i.name} x${i.qty}</span><span>R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}</span></div>`).join('')}<div class="order-line"><span>Total</span><span style="color:var(--primary)">R$ ${price.toFixed(2).replace('.', ',')}</span></div>`;
     const inst = document.getElementById('installments');
     inst.innerHTML = `<option value="1">1x de R$ ${price.toFixed(2).replace('.', ',')}</option>${price > 50 ? `<option value="2">2x de R$ ${(price/2).toFixed(2).replace('.', ',')}</option>` : ''}${price > 100 ? `<option value="3">3x de R$ ${(price/3).toFixed(2).replace('.', ',')}</option>` : ''}`;
     generateQR(price);
@@ -2048,7 +2018,6 @@ function openProductModal(id) {
         document.getElementById('productRating').value = p.rating;
         document.getElementById('productBadge').value = p.badge || '';
         document.getElementById('productDesc').value = p.desc;
-        document.getElementById('productShipping').value = p.shipping || '';
     } else {
         document.getElementById('productFormTitle').textContent = 'Novo Produto';
         document.getElementById('productForm').reset();
@@ -2063,7 +2032,7 @@ function saveProduct(e) {
     const id = document.getElementById('editProductId').value;
     const catId = document.getElementById('productCategory').value;
     const cat = appData.categories.find(c => c.id === catId);
-    const data = { name: document.getElementById('productName').value, category: catId, categoryLabel: cat ? cat.name : catId, image: document.getElementById('productImage').value || 'https://via.placeholder.com/300x300?text=Produto', price: parseFloat(document.getElementById('productPrice').value), oldPrice: parseFloat(document.getElementById('productOldPrice').value) || null, rating: parseFloat(document.getElementById('productRating').value) || 4.5, badge: document.getElementById('productBadge').value || '', desc: document.getElementById('productDesc').value, shipping: document.getElementById('productShipping').value || 'Frete Grátis', reviews: Math.floor(Math.random() * 200 + 10) };
+    const data = { name: document.getElementById('productName').value, category: catId, categoryLabel: cat ? cat.name : catId, image: document.getElementById('productImage').value || 'https://via.placeholder.com/300x300?text=Produto', price: parseFloat(document.getElementById('productPrice').value), oldPrice: parseFloat(document.getElementById('productOldPrice').value) || null, rating: parseFloat(document.getElementById('productRating').value) || 4.5, badge: document.getElementById('productBadge').value || '', desc: document.getElementById('productDesc').value, shipping: 'Acesso Imediato', reviews: Math.floor(Math.random() * 200 + 10) };
     if (id) { const idx = appData.products.findIndex(p => p.id === parseInt(id)); appData.products[idx] = { ...appData.products[idx], ...data }; }
     else { data.id = Date.now(); appData.products.push(data); }
     saveData(); closeProductModal(); renderAdmin(); renderStore();
